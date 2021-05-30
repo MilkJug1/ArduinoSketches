@@ -1,15 +1,15 @@
 # arduniocodeforschool
 
-  #################################
-  #
+  
   # Project for the High School
-  #
+  
   # Made by MilkJug
-  #
+  
   # Most of the Code is by Chaos Buster
-  #
+  
   # Last Modified on 5/10/21 at 9:50 AM
-  #
+  
+  
   ##################################
   Special Thanks to Fundroid 3000 that created the app that drives the program
   Find the App in the playstore --> Arduino Bluetooth controller  by Funduino
