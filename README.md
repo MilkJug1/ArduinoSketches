@@ -10,7 +10,7 @@
   # Last Modified on 5/10/21 at 9:50 AM
   
   
-  ##################################
+
   Special Thanks to Fundroid 3000 that created the app that drives the program
   Find the App in the playstore --> Arduino Bluetooth controller  by Funduino
   This sketch uses the default setting from the App.
