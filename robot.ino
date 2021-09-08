@@ -67,21 +67,64 @@ if(data == 'd'){Backward(speed); delay(2);}  //robot moves backward at speed det
 if(data == 'l'){TurnLeft(speed); delay(2);} // robot veers left
 if(data == 'r'){TurnRight(speed); delay(2);} //robot veers right 
 
-if(data == 'A'){ speed = 50;}     // These lines are looking for a customized code 
-if(data == 'B'){ speed = 75;}     // that we set up in the app
-if(data == 'C'){ speed = 100;}
-if(data == 'D'){ speed = 150;}
-if(data == 'E'){ speed = 175;}
-if(data == 'F'){ speed = 200;} 
-if(data == 'G'){ speed = 225;}
-if(data == 'H'){ speed = 255;} 
+switch(data)    // we check if the app sends a character that corrisponses to a letter here to increase the speed 
+{
+  case 'A':
+    speed = 50;
+  break;
+  
+  case 'B':
+    speed = 75;
+  break;
 
-if(data == 'M'){ speed = 75;}     // Thes line are in case the program is used
-if(data == 'N'){ speed = 150;}   // without being customized
+  case 'C':
+    speed = 100;
+  break;
+
+  case 'D':
+    speed = 150; 
+  break; 
+
+  case 'E':
+   speed = 175;
+  break;
+
+  case 'F':
+    speed = 200;
+  break;
+
+  case 'G':
+    speed = 225;
+  break; 
+  
+  case 'H':
+    speed = 255;
+  break;
+
+  case 'M':
+    speed = 75;
+  break;
+
+  case 'N':
+    speed = 150;
+  break;
+}
 offset = (speed / 2); // this makes the offset for turning one third 
 if(data == '2'){Dance1(speed);
   
 }   //TBD
+
+void SetMotor()
+{
+  myMotor->setSpeed(speed);
+  myMotor->run()
+}
+
+void SetMotor1()
+{
+  myMotor1->setSpeed(speed);
+  myMotor1->run()
+}
 
 if(data == '4'){PivotRight(speed);}  // pivot inplace to the right
 //if(data == '3'){setSpeed = 75;}  // TBD
