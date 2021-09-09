@@ -64,7 +64,7 @@ void loop() {
   UpdateDisplay();  // this line runs the function to print our stuff to the OLED
 
   if (data == 'o' || data == '0') {
-    Stop(); // This line stops the robot using Stop() funtion below
+    Stop(); 
   }
   if (data == 'u') {
     Forward(speed);  // robot moves forward at speed determined by shape buttons 90 is forward
@@ -133,7 +133,7 @@ void loop() {
   if (data == '2') {
     Dance1(speed);
 
-  }   //TBD
+  }   
 
   void SetMotor(int speed)    // instead of having the same 2 lines be repeated, we make a fuction where it sets both automatically with a paramater of the direction like FORWARD
   {
@@ -211,38 +211,38 @@ void Dance1(int speed)      // Some random dance I cooked up
   myMotor1->setSpeed(150);
   myMotor1->run(FORWARD);
   delay(300);
-  OLED("Pivot SlowR", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+  OLED("Pivot SlowR", 4, 3, 0);
+  
   myMotor->setSpeed(100);
-  myMotor->run(FORWARD);      //Make the robot pivot slowly
+  myMotor->run(FORWARD);      
   myMotor1->setSpeed(100);
   myMotor1->run(BACKWARD);
   delay(200);
-  OLED("Pivot SlowL", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+  OLED("Pivot SlowL", 4, 3, 0); 
+
   myMotor->setSpeed(100);
-  myMotor->run(BACKWARD);      //Make the robot pivot slowly
+  myMotor->run(BACKWARD);      
   myMotor1->setSpeed(100);
   myMotor1->run(FORWARD);
   delay(200);
   OLED("Up   Slow", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+  
   myMotor->setSpeed(150);
-  myMotor->run(BACKWARD);      //Make the robot roll forward
+  myMotor->run(BACKWARD);      
   myMotor1->setSpeed(150);
   myMotor1->run(BACKWARD);
   delay(300);
   OLED("Pivot SlowR", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+
   myMotor->setSpeed(100);
   myMotor->run(BACKWARD);      //Make the robot pivot slowly
   myMotor1->setSpeed(100);
   myMotor1->run(FORWARD);
   delay(200);
   OLED("Pivot SlowL", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+  
   myMotor->setSpeed(100);
-  myMotor->run(FORWARD);      //Make the robot pivot slowly
+  myMotor->run(FORWARD);      
   myMotor1->setSpeed(100);
   myMotor1->run(BACKWARD);
   delay(200);
@@ -255,7 +255,7 @@ void Dance1(int speed)      // Some random dance I cooked up
   delay(300);
 
   OLED("Pivot FAST", 4, 3, 0); // Enter the phrase in quotes. Add a comma and the text size you want
-  // The next comma is where on the x axis, and last is where on the Y axis
+  
   myMotor->setSpeed(255);
   myMotor->run(BACKWARD);      //Pivots FAST counter clockwise
   myMotor1->setSpeed(255);
