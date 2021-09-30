@@ -112,8 +112,23 @@ void loop() {
 
   void SetMotor(int speed)    // instead of having the same 2 lines be repeated, we make a fuction where it sets both automatically with a paramater of the direction like FORWARD
   {
-    myMotor->setSpeed(speed); // we set the speed for the 1st motor
-    myMotor->run();           // -and then run it with the direction as a parameter.
+    myMotor->setSpeed(char forward, char backward); // we set the speed for the 1st motor
+    if(forward == FORWARD)
+    {
+      myMotor->setSpeed(FORWARD);
+    }
+    else
+    {
+      myMotor->setSpeed(BACKWARD);
+    }
+    myMotor->run(int speed, int offset);  // -and then run it with the direction as a parameter.
+    if(speed == speed){
+        myMotor->run(speed);
+      }
+    else
+    {
+      myMotor->run(offset)  
+    }
   }
 
   void SetMotor1(int speed)
@@ -132,8 +147,7 @@ void loop() {
     PivotRight(speed);
   }
 }
-
-void Foward(int speed)
+void Forward(int speed)
 {
   SetMotor(FORWARD);
 }
