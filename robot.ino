@@ -202,16 +202,20 @@ void Stop() {           // This is the stop function
   myMotor1->run(RELEASE);     // when the function is called
 }
 
+void Display(int x, int y, char m)
+{
+  display.setCursor(int x, int y); // Set the cursor position on the oled, then we print the character that is chosen.
+  display.print(char y);
+}
+
 void UpdateDisplay() {  // This function is where we configure the display
   RawValue = analogRead(A10);  // Convert analog reading to Voltage
   BatteryVoltage = RawValue / 84; // This is a constant based on the resistor voltage divider
   display.clearDisplay();  //This command clears the buffer
-  display.setCursor(0, 0); // The first number 0-128 pixels horiontal. The second is 0-64 pixels vertical
-  display.print("Bat:"); // prints to OLED
-  display.setCursor(50, 0); // moves the cursor over 50 pixels
-  display.print(BatteryVoltage); // prints the calcualted voltage
-  display.setCursor(100, 0); // moves the cursor over to position 100 pixels
-  display.print("V");   
+  Display(0, 0, "Bat:");
+  display.setCursor(50, 0);  
+  display.print(BatteryVoltage);  
+  display.setCursor(100, 0);   
   display.setCursor(0, 16); // Second line moves down 16 pixels
   display.print("Data "); //prints to OLED
   display.setCursor(90, 16); //moves over om second line
