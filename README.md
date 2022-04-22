@@ -16,6 +16,7 @@ The entirety of Arduino.
 
 ### File Structure
 
+```bash
 ├── include
 │   └── README --> Nothing Yet
 ├── lib
@@ -27,6 +28,7 @@ The entirety of Arduino.
 │   └── main.cpp    --> The main file and where the entirety of this program resides.
 └── test
 └── README
+```
 
 ### Parts
 
