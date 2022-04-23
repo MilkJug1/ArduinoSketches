@@ -2,7 +2,7 @@
 
 This is for a Robot(technically a rc car) that I am building in robotics, now this is where I'm just hosting the code.
 
-Made by Michael Crawford
+Made by MilkJug(Michael)
 
 Does require an app to control, but probably with some tweaking you can getting working on anything else.
 
